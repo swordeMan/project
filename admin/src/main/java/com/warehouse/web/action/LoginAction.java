@@ -27,7 +27,6 @@ public class LoginAction {
 		user.setUserName("Ð¡»ªsdf");
 		return "jsp/index";
 	}
-		
 	public int add(int a,int b){
 		return a+b;
 	}
