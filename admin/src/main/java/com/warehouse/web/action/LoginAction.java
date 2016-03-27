@@ -23,7 +23,7 @@ public class LoginAction {
 		 * model.addAttribute("ur", ur);
 		 */
 		user.setPassword("111");
-		user.setUserName("张11fgh华");
+		user.setUserName("小华");
 		return "jsp/index";
 	}
 }
