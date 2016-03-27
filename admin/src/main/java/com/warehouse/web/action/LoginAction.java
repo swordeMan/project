@@ -24,10 +24,10 @@ public class LoginAction {
 		 * model.addAttribute("ur", ur);
 		 */
 		user.setPassword("111");
-		user.setUserName("小华");
+		user.setUserName("小华sdf");
 		return "jsp/index";
 	}
-	public void add(){
-		
+	public int add(int a,int b){
+		return a+b;
 	}
 }
