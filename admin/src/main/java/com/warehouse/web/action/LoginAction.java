@@ -27,4 +27,7 @@ public class LoginAction {
 		user.setUserName("Ð¡»ª");
 		return "jsp/index";
 	}
+	public void add(){
+		
+	}
 }
