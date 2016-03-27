@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.warehouse.web.entity.User;
 
+
 @Controller
 public class LoginAction {
 	/**
@@ -23,8 +24,7 @@ public class LoginAction {
 		 * model.addAttribute("ur", ur);
 		 */
 		user.setPassword("111");
-		user.setUserName("ÏÂ»¬");
+		user.setUserName("Ð¡»ª");
 		return "jsp/index";
 	}
 }
-
