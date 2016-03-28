@@ -3,6 +3,8 @@
 <generatorConfiguration>
 <!-- 配置Run As Maven build : Goals 参数 : mybatis-generator:generate -Dmybatis.generator.overwrite=true -->
 <!-- 配置 tableName,使用 Run As Maven build 生成 dao model 层 -->
+
+<!-- 配置为自己本地的mysql-connection.jar路径 -->
 	<classPathEntry
 		location="E:\technology\m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
 	<context id="context1" targetRuntime="MyBatis3Simple" defaultModelType="flat">
@@ -13,11 +15,11 @@
 			connectionURL="jdbc:mysql://localhost:3306/admin?useUnicode=true&amp;characterEncoding=UTF-8"
 			userId="root" password="root" />
 		<javaModelGenerator targetPackage="com.warehouse.web.entity"
-			targetProject="E:\technology\git\admin\src\main\java" />
+			targetProject="src\main\java" />
 		<sqlMapGenerator targetPackage="com.warehouse.web.sqlmap"
-			targetProject="E:\technology\git\admin\src\main\java" />
+			targetProject="src\main\java" />
 		<javaClientGenerator targetPackage="com.warehouse.web.dao"
-			targetProject="E:\technology\git\admin\src\main\java"
+			targetProject="src\main\java"
 			type="XMLMAPPER" />
 		<table schema="admin" tableName="user" >
 			<generatedKey column="id" sqlStatement="Mysql"/>
