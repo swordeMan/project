@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+<!-- 配置Run As Maven build : Goals 参数 : mybatis-generator:generate -Dmybatis.generator.overwrite=true -->
+<!-- 配置 tableName,使用 Run As Maven build 生成 dao model 层 -->
+	<classPathEntry
+		location="E:\technology\m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
+	<context id="context1" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/admin?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="root" />
+		<javaModelGenerator targetPackage="com.warehouse.web.entity"
+			targetProject="E:\technology\git\admin\src\main\java" />
+		<sqlMapGenerator targetPackage="com.warehouse.web.sqlmap"
+			targetProject="E:\technology\git\admin\src\main\java" />
+		<javaClientGenerator targetPackage="com.warehouse.web.dao"
+			targetProject="E:\technology\git\admin\src\main\java"
+			type="XMLMAPPER" />
+		<table schema="admin" tableName="user" >
+			<generatedKey column="id" sqlStatement="Mysql"/>
+		</table>
+	</context>
+</generatorConfiguration>

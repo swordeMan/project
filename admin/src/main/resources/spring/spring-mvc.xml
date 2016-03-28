@@ -21,6 +21,7 @@
 
 	<!-- 扫描注释的package -->
 	<context:component-scan base-package="com.warehouse.web" />
+	<context:component-scan base-package="com.warehouse.web.dao" />
 	
 	<!-- spring会用默认的Servlet来响应静态文件,否则找不到js,css,jpg等 -->
 	<mvc:default-servlet-handler/>
