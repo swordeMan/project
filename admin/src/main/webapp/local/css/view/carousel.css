@@ -12,7 +12,7 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
+ .navbar-wrapper {
   position: absolute;
   top: 0;
   right: 0;
@@ -20,7 +20,7 @@ body {
   z-index: 20;
 }
 
-/* Flip around the padding for proper display in narrow viewports */
+Flip around the padding for proper display in narrow viewports
 .navbar-wrapper > .container {
   padding-right: 0;
   padding-left: 0;
@@ -31,7 +31,7 @@ body {
 }
 .navbar-wrapper .navbar .container {
   width: auto;
-}
+} 
 
 
 /* CUSTOMIZE THE CAROUSEL

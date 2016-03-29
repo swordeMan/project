@@ -11,7 +11,7 @@
 <meta name="author" content="zhangsh">
 <title>Regain</title>
 
-<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="dist/css/bootstrap.css" rel="stylesheet">
 <link href="assets/js/ie10-viewport-bug-workaround.js" rel="stylesheet">
 
 <link href="local/css/view/carousel.css" rel="stylesheet">
@@ -31,16 +31,16 @@
 								class="icon-bar"></span> <span class="icon-bar"></span> <span
 								class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Project name</a>
+						<a class="navbar-brand" href="#">追  忆</a>
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#about">About</a></li>
+							<li class="active"><a href="#">主页</a></li>
+							<li><a href="#about">关于</a></li>
 							<li><a href="#contact">Contact</a></li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown" role="button" aria-haspopup="true"
-								aria-expanded="false">Dropdown <span class="caret"></span></a>
+								aria-expanded="false">更多 <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="#">Action</a></li>
 									<li><a href="#">Another action</a></li>
@@ -51,6 +51,16 @@
 									<li><a href="#">One more separated link</a></li>
 								</ul></li>
 						</ul>
+						<form class="navbar-form navbar-right" role="form" action="login">
+							<div class="form-group">
+								<input type="email" placeholder="Email" class="form-control">
+							</div>
+							<div class="form-group">
+								<input type="password" placeholder="Password"
+									class="form-control">
+							</div>
+							<button type="submit" class="btn btn-success">登 录</button>
+						</form>
 					</div>
 				</div>
 			</nav>
@@ -59,8 +69,6 @@
 	</div>
 
 
-	<!-- Carousel
-    ================================================== -->
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -84,7 +92,7 @@
 							rules.
 						</p>
 						<p>
-							<a class="btn btn-lg btn-primary" href="login" role="button">登 录</a>
+							<a class="btn btn-lg btn-primary" href="register" role="button">注 册</a>
 						</p>
 					</div>
 				</div>
