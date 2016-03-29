@@ -21,7 +21,7 @@
 		<javaClientGenerator targetPackage="com.warehouse.web.dao"
 			targetProject="src\main\java"
 			type="XMLMAPPER" />
-		<table schema="admin" tableName="user" >
+		<table schema="admin" tableName="register" >
 			<generatedKey column="id" sqlStatement="Mysql"/>
 		</table>
 	</context>

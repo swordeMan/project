@@ -92,7 +92,7 @@
         <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> 记 住
+            <input type="checkbox" value="remember-me"> 《同意用户协议》
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">注   册</button>
