@@ -49,7 +49,7 @@
 		<property name="prefix" value="/WEB-INF/" />
 		<property name="suffix" value=".jsp" />
 		<!-- action中的返回值用viewNames来定位用那个resolver eg:return jsp/index -->
-		<property name="viewNames" value="jsp/*" />
+		<property name="viewNames" value="*" />
 		<property name="order" value="1" />
 		<property name="cache" value="false" />
 	</bean>

@@ -31,6 +31,6 @@ public class LoginAction {
 		user.setPassword("111");
 		user.setUserName("Ð¡»ªsdf");
 		User dbUser =  userService.selectByPrimaryKey(1);
-		return "jsp/index";
+		return "index";
 	}
 }
