@@ -27,6 +27,12 @@
 		<!-- 拦截所有请求,交给DispatcherServlet处理 -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<!-- 这样welcome-file才可以使用 -->
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<!-- 拦截所有请求,交给DispatcherServlet处理 -->
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
 
 	<!-- 读取spring配置文件，支持通配 -->
 	<context-param>
@@ -70,7 +76,7 @@
 	</filter-mapping> -->
 
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index</welcome-file>
 	</welcome-file-list>
 
 </web-app>

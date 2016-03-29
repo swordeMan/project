@@ -21,16 +21,13 @@ public class LoginAction {
 	@Autowired
 	UserService userService;
 	
+	@RequestMapping("index")
+	public String index(Model model) {
+		return "view/index";
+	}
+	
 	@RequestMapping("login")
-	public String login(Model model, User user) {
-		user.setAge(5);
-		/*
-		 * UserRole ur = new UserRole(); ur.setUserName("shuhua");
-		 * model.addAttribute("ur", ur);
-		 */
-		user.setPassword("111");
-		user.setUserName("Ð¡»ªsdf");
-		User dbUser =  userService.selectByPrimaryKey(1);
-		return "index";
+	public String login(Model model) {
+		return "login/login";
 	}
 }
