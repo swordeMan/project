@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans    
-    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd    
-    http://www.springframework.org/schema/tx    
-    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd   
+    http://www.springframework.org/schema/beans/spring-beans.xsd    
     http://www.springframework.org/schema/context   
-    http://www.springframework.org/schema/context/spring-context-4.0.xsd 
-    http://www.springframework.org/schema/aop
-    http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+    http://www.springframework.org/schema/context/spring-context.xsd 
     http://www.springframework.org/schema/mvc   
-    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
 	<!-- 激活@Controller模式 -->
@@ -26,7 +21,7 @@
 	<mvc:default-servlet-handler/>
 
 	<!-- thymeleaf -->
-	<bean id="templateResolver"
+	<!-- <bean id="templateResolver"
 		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".html" />
@@ -41,12 +36,12 @@
 				<property name="templateResolver" ref="templateResolver" />
 			</bean>
 		</property>
-		<!-- action中的返回值用viewNames来定位用那个resolver eg:return view/index -->
+		action中的返回值用viewNames来定位用那个resolver eg:return view/index
 		<property name="viewNames" value="*" />
 		<property name="order" value="2" />
-		<!-- 找了好久，在org.thymeleaf.spring4.view.ThymeleafViewResolver属性中有characterEncoding属性，所以要赋值 -->
+		找了好久，在org.thymeleaf.spring4.view.ThymeleafViewResolver属性中有characterEncoding属性，所以要赋值
 		<property name="characterEncoding" value="UTF-8"/>
-	</bean>
+	</bean> -->
 
 	<!-- jsp resolver -->
 	<bean
@@ -54,9 +49,9 @@
 		<property name="prefix" value="/WEB-INF/" />
 		<property name="suffix" value=".jsp" />
 		<!-- action中的返回值用viewNames来定位用那个resolver eg:return jsp/index -->
-		<property name="viewNames" value="jsp/*" />
+		<!-- <property name="viewNames" value="*" />
 		<property name="order" value="1" />
-		<property name="cache" value="false" />
+		<property name="cache" value="false" /> -->
 	</bean>
 
 </beans>

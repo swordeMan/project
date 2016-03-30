@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -18,14 +19,14 @@ public class MybatisTest {
 	@Resource
     private UserMapper userMapper;
 	
+	@Resource
+    private Md5PasswordEncoder md5;
+	
 	private static Logger logger = Logger.getLogger(MybatisTest.class);
 	@Test(expected =ArithmeticException.class)
 	public void divideZero(){
-		int n = 2/0;
+		Assert.assertNotNull(md5);
 	}
-	@Test
-	public void userTest(){
-		User user = userMapper.selectByPrimaryKey(1);
-		Assert.assertNotNull(user);
-	}
+	
+	
 }
