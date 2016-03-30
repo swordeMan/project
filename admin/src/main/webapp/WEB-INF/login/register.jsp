@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -81,22 +83,26 @@
 				</div>
 			</nav>
 			</div>
-      <form class="form-signin">
+      <form:form commandName="user" class="form-signin" action="submitRegister">
         <h2 class="form-signin-heading">加入我们</h2>
         <p class="lead">从此理财不再有后顾之忧</p>
+        
         <label for="inputEmail" >邮 箱</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <form:errors path="email" />
+        <form:input path="email" type="email" id="inputEmail" class="form-control" placeholder="Email address"/>
+        
         <label for="inputPassword" >密 码</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <form:errors path="password" />
+        <form:input path="password" type="password" id="inputPassword" class="form-control" placeholder="Password"/>
         <label for="inputConfirmPassword" >密码确认</label>
-        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+        <input name="confirmPassword" type="password" id="inputConfirmPassword" class="form-control" placeholder="Password"/>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> 《同意用户协议》
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">注   册</button>
-      </form>
+      </form:form>
 
     </div> <!-- /container -->
 
