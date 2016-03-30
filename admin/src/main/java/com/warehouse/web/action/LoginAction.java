@@ -35,11 +35,43 @@ public class LoginAction {
 	
 	private static final Log log = 
 			LogFactory.getLog(LoginAction.class.getName());
+<<<<<<< HEAD
 	
 	@RequestMapping("index")
 	public String index(Model model) {
 		log.info(this.getClass()+".index");
 		return "view/index";
+=======
+	
+	@RequestMapping("index")
+	public String index(Model model) {
+		log.info(this.getClass()+".index");
+		return "view/index";
+	}
+	
+	@RequestMapping("login")
+	public String login(Model model) {
+		return "login/login";
+	}
+	
+	@RequestMapping("register")
+	public String register(User user,Model model) {
+		return "login/register";
+	}
+	
+	@RequestMapping("submitRegister")
+	public String submitRegister(@Valid User user,BindingResult bindingResult,HttpServletRequest request, Model model) {
+		if (bindingResult.hasErrors()) {
+			return "login/register";
+		}
+		String confirmPassword = request.getParameter("confirmPassword");
+		
+		if(userService.confirmPassword(user.getPassword(), confirmPassword)){
+			user.setPassword(md5.encodePassword(confirmPassword, "key"));
+			userMapper.insert(user);
+		}
+		return "login/login";
+>>>>>>> branch 'master' of https://github.com/swordeMan/project.git
 	}
 	
 	@RequestMapping("login")
