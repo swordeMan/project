@@ -1,5 +1,6 @@
 package com.warehouse.web.action;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -30,8 +31,9 @@ public class LoginAction {
 	UserService userService;
 	@Autowired
     UserMapper userMapper;
-	
-	Md5PasswordEncoder md5=new Md5PasswordEncoder();
+	@Autowired
+	Md5PasswordEncoder md5;
+//	Md5PasswordEncoder md5 = new Md5PasswordEncoder();
 	
 	private static final Log log = 
 			LogFactory.getLog(LoginAction.class.getName());

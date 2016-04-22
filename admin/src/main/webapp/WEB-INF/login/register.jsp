@@ -117,7 +117,7 @@
 										                        min: 6,
 										                        max: 30,
 										                        message: '密码的长度为6-30位'
-										                    }
+										                    } 
 														}
 													},
 													confirmPassword : {
