@@ -60,7 +60,12 @@ public class LoginAction {
 			return "login/register";
 		}
 		String confirmPassword = request.getParameter("confirmPassword");
-		
+		/**
+		 * 下面这条语句也应该放在userService中，
+		 * <ul>controller中要尽可能少的逻辑，指写类似上面两行的类型的代码</ul>
+		 * <li>从request中取东西</li>
+		 * <li>不同情况下返回不同的view</li>
+		 */
 		if(userService.confirmPassword(user.getPassword(), confirmPassword)){
 			user.setPassword(md5.encodePassword(confirmPassword, "key"));
 			userMapper.insert(user);
