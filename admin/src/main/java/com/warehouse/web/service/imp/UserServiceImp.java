@@ -21,7 +21,6 @@ public class UserServiceImp implements UserService{
 	@Autowired
     private UserMapper userMapper;
 	
-	Md5PasswordEncoder md5=new Md5PasswordEncoder();
 
 	@Override
 	public List<User> selectAll() {

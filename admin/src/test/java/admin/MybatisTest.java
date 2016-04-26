@@ -13,7 +13,7 @@ import com.warehouse.web.dao.UserMapper;
 import com.warehouse.web.entity.User;  
 
 @RunWith(SpringJUnit4ClassRunner.class)     //表示继承了SpringJUnit4ClassRunner类  
-@ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
+@ContextConfiguration(locations = {"classpath*:applicationContext.xml","classpath:/spring/spring-beans.xml"})
 public class MybatisTest {
 	
 	@Resource
@@ -23,7 +23,7 @@ public class MybatisTest {
     private Md5PasswordEncoder md5;
 	
 	private static Logger logger = Logger.getLogger(MybatisTest.class);
-	@Test(expected =ArithmeticException.class)
+	@Test
 	public void divideZero(){
 		Assert.assertNotNull(md5);
 	}
