@@ -74,7 +74,7 @@
 			</nav>
 		<div class="col-lg-8 col-lg-offset-2">
 			<form:form id="registerForm" commandName="user"
-				class="form-horizontal" action="submitRegister">
+				class="form-horizontal">
 				<h2 class="form-signin-heading">加入我们</h2>
 				<p class="lead">从此理财不再有后顾之忧</p>
 

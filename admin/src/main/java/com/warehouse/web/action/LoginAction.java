@@ -1,6 +1,5 @@
 package com.warehouse.web.action;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -12,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.warehouse.web.dao.UserMapper;
 import com.warehouse.web.entity.User;
@@ -49,12 +49,12 @@ public class LoginAction {
 		return "login/login";
 	}
 	
-	@RequestMapping("register")
+	@RequestMapping(value="register", method=RequestMethod.GET)
 	public String register(User user,Model model) {
 		return "login/register";
 	}
 	
-	@RequestMapping("submitRegister")
+	@RequestMapping(value="register", method=RequestMethod.POST)
 	public String submitRegister(@Valid User user,BindingResult bindingResult,HttpServletRequest request, Model model) {
 		if (bindingResult.hasErrors()) {
 			return "login/register";

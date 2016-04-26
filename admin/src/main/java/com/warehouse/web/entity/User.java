@@ -1,8 +1,8 @@
 package com.warehouse.web.entity;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
 
 public class User {
 
@@ -12,11 +12,13 @@ public class User {
 
 	private Integer age;
 
-	@Min(message = "请输入至少6位密码", value = 6)
-	@Max(message = "密码最多30位", value = 30)
+	/*@Min(message = "请输入至少6位密码", value = 6)
+	@Max(message = "密码最多30位", value = 30)*/
+	@Size(min=6 , max = 30)
 	private String password;
 
-	@Pattern(regexp = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", message = "请输入正确的邮箱格式")
+	//@Pattern(regexp = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", message = "请输入正确的邮箱格式")
+	@Email
 	private String email;
 
 	private Byte isActive;
